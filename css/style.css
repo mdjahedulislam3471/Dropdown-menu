@@ -1,0 +1,141 @@
+/* BROWSER RESETING START */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+   
+}
+/* BROWSER RESETING END */
+a{ 
+    text-decoration: none;
+    
+}
+ul,li{
+    list-style: none;
+   
+}
+nav{
+    
+    background: #f4f4f4;
+    margin: 0 auto;
+    font-family: 'Anton', sans-serif;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  width: 800px;
+}
+nav ul li{
+    display:inline-block;
+    position: relative;
+}
+nav ul { text-align: center;}
+nav ul li a{
+    color: black;
+    padding: 15px 10px;
+    display: block;
+    font-weight:1000;
+    position: relative;
+    z-index: 1;
+
+}
+/* > it is direct children Selector */
+nav ul li:hover > a{
+color: white;
+transition: 0.5s;
+}
+nav ul li a::before{content:"";
+   width:100%;
+    height:0%; 
+    background-color:red;
+    position: absolute;
+    left:0px;
+    bottom:0px;
+    z-index: -1;
+    transition: 0.3s;}
+
+/* 
+jetah tekeh legeh bosateh hobeh setar value ta 0px koreh dileh hobe,but 
+bottom tekeh start korteh chaileh ,uporer height 100%,Width 0%
+& niceh nav ul li:hover a ::before er width er jaigai height*/
+/* nicer ta korle ,hover korle a er before ta width 100% hoiya asbeh */
+nav ul li:hover a::before{
+    background-color:dodgerblue;
+    height:100%;}
+
+   
+    
+    /* Drop Down Menu  Start*/
+    nav ul li ul{
+        
+        border-top:5px solid rgba(255, 0, 0, 0.87);
+        position:absolute;
+        background-color: #f4f4f4;
+        padding: 10px;
+        opacity: 0.5;
+        visibility: hidden; 
+        box-shadow:box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        display: block;
+        transition: 0.3s;
+        width:200px;
+    }
+    nav ul li ul li{
+        display:block;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.158);
+    }
+    /* sub menu er moddeh jodin last er takeh doreh kono kaj korteh chai tokon nicer kaj ta korteh hobeh */
+    nav ul li ul li:last-child {
+        border:none;
+    }
+    nav ul li:hover> ul{
+        opacity:1; 
+        visibility: visible; 
+      
+     
+       
+    }
+   
+
+ /* Drop Down Menu End*/
+ nav ul li ul li ul{
+    left:100%;
+    top:0px;
+    width:180px;
+
+ }
+
+
+
+    
+
+
+
+
+
+
+/* .perents{
+    width:800px;
+    background-color: khaki;
+    margin: auto;
+    height: 300px;
+}
+.child1,.child2,.child3{
+    width:100px;
+    height:100px;
+    background-color:red;
+}
+.child2{
+    background-color: rgb(57, 15, 209);
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    z-index: 3;
+  
+}
+.child3{
+    background-color: black;
+    position: absolute;
+    left: 250px;
+    z-index:2;
+  
+
+} */
+
